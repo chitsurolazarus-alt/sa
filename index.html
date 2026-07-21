@@ -2048,7 +2048,7 @@
     }
 
     function csvHeaderMatches(headerRow) {
-      if (!headerRow || headerRow.length < CSV_EXPECTED_HEADERS.length) return false;
+      if (!headerRow || headerRow.length !== CSV_EXPECTED_HEADERS.length) return false;
       return CSV_EXPECTED_HEADERS.every((h, i) => headerRow[i] === h);
     }
 
